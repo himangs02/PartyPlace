@@ -7,7 +7,7 @@ import {
   IndianRupee, 
   ShieldCheck, 
   CheckCircle2, 
-  Sparkles, 
+  PartyPopper, 
   ArrowRight, 
   Star, 
   Music, 
@@ -113,7 +113,7 @@ export default function LandingView({
         <div className="container hero-container">
           <div className="hero-content">
             <div className="hero-pill-badge">
-              <Sparkles size={14} /> Private Event Spaces for 15–30 Guests
+              <PartyPopper size={14} /> Private Event Spaces for 15–30 Guests
             </div>
             <h1 className="hero-title">
               Your Party. <br />
@@ -351,7 +351,7 @@ export default function LandingView({
             <div className="step-card card">
               <div className="step-number">03</div>
               <div className="step-icon-wrap">
-                <Sparkles size={28} color="#059669" />
+                <PartyPopper size={28} color="#059669" />
               </div>
               <h3 className="step-title">Celebrate Your Special Moments</h3>
               <p className="step-desc">

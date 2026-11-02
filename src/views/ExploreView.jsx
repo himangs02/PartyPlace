@@ -9,7 +9,7 @@ import {
   X, 
   RotateCcw, 
   ShieldCheck, 
-  Sparkles,
+  PartyPopper,
   ArrowUpDown
 } from 'lucide-react';
 import PropertyCard from '../components/PropertyCard';
@@ -133,7 +133,7 @@ export default function ExploreView({
               </p>
             </div>
             <div className="explore-stats-pill">
-              <Sparkles size={16} color="#70152F" />
+              <PartyPopper size={16} color="#70152F" />
               <span><strong>{filteredSpaces.length} spaces</strong> available in Panipat & NCR</span>
             </div>
           </div>

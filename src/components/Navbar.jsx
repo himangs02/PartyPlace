@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { 
-  Sparkles, 
+  PartyPopper, 
   Search, 
   PlusCircle, 
   Bell, 
@@ -44,7 +44,7 @@ export default function Navbar({
         {/* Brand Logo */}
         <div className="nav-brand" onClick={() => handleNav('landing')}>
           <div className="logo-icon-wrap">
-            <Sparkles className="logo-sparkle" size={20} />
+            <PartyPopper size={20} />
           </div>
           <span className="brand-name">
             Party<span className="brand-accent">Place</span>

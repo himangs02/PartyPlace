@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, ShieldCheck, Heart, MapPin, Mail, Phone } from 'lucide-react';
+import { PartyPopper, ShieldCheck, Heart, MapPin, Mail, Phone } from 'lucide-react';
 
 export default function Footer({ onNavigate, onOpenFAQ }) {
   return (
@@ -11,7 +11,7 @@ export default function Footer({ onNavigate, onOpenFAQ }) {
           <div className="footer-brand-col">
             <div className="nav-brand" onClick={() => onNavigate('landing')} style={{ cursor: 'pointer' }}>
               <div className="logo-icon-wrap">
-                <Sparkles size={20} color="#FFFFFF" />
+                <PartyPopper size={20} color="#FFFFFF" />
               </div>
               <span className="brand-name" style={{ color: '#FFFFFF' }}>
                 Party<span style={{ color: '#D94D83' }}>Place</span>

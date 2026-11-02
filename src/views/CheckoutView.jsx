@@ -11,7 +11,6 @@ import {
   Building, 
   CheckCircle, 
   Lock, 
-  Sparkles,
   QrCode,
   AlertCircle
 } from 'lucide-react';

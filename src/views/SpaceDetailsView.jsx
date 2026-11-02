@@ -11,7 +11,7 @@ import {
   CheckCircle, 
   AlertCircle, 
   VolumeX, 
-  Sparkles, 
+  PartyPopper, 
   MessageSquare, 
   ChevronRight, 
   Image as ImageIcon,
@@ -267,7 +267,7 @@ export default function SpaceDetailsView({
             {/* Quick Specs Chips */}
             <div className="specs-chips-row">
               <span className="spec-chip"><Users size={16} color="#70152F" /> Up to {space.capacity} Guests</span>
-              <span className="spec-chip"><Sparkles size={16} color="#70152F" /> {space.category}</span>
+              <span className="spec-chip"><PartyPopper size={16} color="#70152F" /> {space.category}</span>
               <span className="spec-chip"><CheckCircle size={16} color="#70152F" /> Parking Included</span>
               <span className="spec-chip"><CheckCircle size={16} color="#70152F" /> Wi-Fi</span>
               <span className="spec-chip"><CheckCircle size={16} color="#70152F" /> Air Conditioning</span>

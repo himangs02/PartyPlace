@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Sparkles, User, ShieldCheck, Home } from 'lucide-react';
+import { X, PartyPopper, User, ShieldCheck, Home } from 'lucide-react';
 
 export default function AuthModal({ onClose, onSelectUser, currentUser }) {
   const [tab, setTab] = useState('quick'); // 'quick' or 'custom'
@@ -27,7 +27,7 @@ export default function AuthModal({ onClose, onSelectUser, currentUser }) {
       <div className="modal-content auth-modal card" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <div className="brand-logo-small">
-            <Sparkles size={18} color="#D94D83" />
+            <PartyPopper size={18} color="#D94D83" />
             <span style={{ fontWeight: 700, color: '#70152F' }}>PartyPlace Account</span>
           </div>
           <button className="btn-icon" onClick={onClose}>

@@ -8,7 +8,6 @@ import {
   MapPin, 
   Users, 
   IndianRupee, 
-  Sparkles,
   Home,
   Check
 } from 'lucide-react';
