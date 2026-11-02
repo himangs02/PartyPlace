@@ -1,0 +1,559 @@
+// PartyPlace Initial Seed Data with high-resolution photography and realistic venues
+
+export const initialData = {
+  settings: {
+    commissionRate: 10, // 10% platform fee
+    securityDepositDefault: 2000,
+    musicCurfewDefault: "10:30 PM",
+    maxPartyCapacity: 30,
+    supportEmail: "support@partyplace.in",
+    supportPhone: "+91 98765 43210"
+  },
+
+  users: [
+    {
+      id: "user-1",
+      name: "Akanksha Verma",
+      email: "akanksha@example.com",
+      role: "customer",
+      phone: "+91 98112 34567",
+      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+      joined: "Jan 2026",
+      verified: true
+    },
+    {
+      id: "user-2",
+      name: "Rohan Mehta",
+      email: "rohan@partyplace.in",
+      role: "host",
+      phone: "+91 98223 45678",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      joined: "Nov 2025",
+      isSuperhost: true,
+      verified: true,
+      bankAccount: {
+        accountHolder: "Rohan Mehta",
+        accountNumber: "••••••••4812",
+        ifsc: "HDFC0001234",
+        bankName: "HDFC Bank"
+      }
+    },
+    {
+      id: "user-3",
+      name: "Admin",
+      email: "admin@partyplace.com",
+      role: "admin",
+      phone: "+91 98990 00001",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      joined: "Jan 2025",
+      verified: true
+    }
+  ],
+
+  spaces: [
+    {
+      id: "space-1",
+      name: "The Palm Villa",
+      tagline: "Private luxury villa with pool & landscaped garden for intimate celebrations",
+      category: "Villa",
+      hostId: "user-2",
+      hostName: "Rohan Mehta",
+      hostAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: true,
+      city: "Panipat",
+      area: "Sector 11",
+      fullAddress: "Villa #42, Sector 11, HUDA Greens, Panipat, Haryana 132103",
+      capacity: 30,
+      price: 5000,
+      durationHours: 4,
+      rating: 4.8,
+      reviewCount: 112,
+      verified: true,
+      isFeatured: true,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "A beautiful private villa perfect for birthdays, get-togethers, farewells, family functions, and small celebrations. Features spacious outdoor pool area, modern air-conditioned lounge, lawn for seating, and a safe, private environment. Completely private access during your booking slot.",
+      amenities: ["Swimming Pool", "Lawn / Garden", "Air Conditioning", "Wi-Fi", "Music System", "Dedicated Parking", "Catering Area", "Refrigerator", "Barbeque Grill"],
+      rules: [
+        "Maximum 30 guests allowed strictly.",
+        "Outdoor music allowed till 10:30 PM (as per municipal noise laws).",
+        "Valid government photo ID required for primary booker upon check-in.",
+        "No unauthorized commercial shooting or wild unruly raves.",
+        "Security deposit of ₹2,000 collected at check-in and refunded upon clean checkout."
+      ],
+      noiseRestriction: "Outdoor amplified sound allowed strictly until 10:30 PM. Indoor ambient music permitted anytime.",
+      securityDeposit: 2000,
+      permittedEvents: ["Birthday Parties", "Farewell Parties", "Family Dinners", "Get-togethers", "Small Engagements", "Private Photoshoots"],
+      availableSlots: [
+        "11:00 AM - 3:00 PM",
+        "4:00 PM - 8:00 PM",
+        "6:00 PM - 10:00 PM",
+        "Full Day (11:00 AM - 11:00 PM)"
+      ]
+    },
+    {
+      id: "space-2",
+      name: "Skyline Terrace",
+      tagline: "Starlit rooftop oasis with panoramic city views and ambient fairy lighting",
+      category: "Terrace",
+      hostId: "user-2",
+      hostName: "Rohan Mehta",
+      hostAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: true,
+      city: "Panipat",
+      area: "Model Town",
+      fullAddress: "Penthouse Rooftop, 88 Model Town Near Club Road, Panipat 132103",
+      capacity: 25,
+      price: 3500,
+      durationHours: 4,
+      rating: 4.7,
+      reviewCount: 89,
+      verified: true,
+      isFeatured: true,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "Spectacular open-air rooftop terrace overlooking the city. Decorated with warm festoon lights, cozy lounge seating, and an elevated wooden deck. Ideal for cocktail dinners, acoustic musical nights, birthday celebrations, and farewells.",
+      amenities: ["Terrace View", "Fairy Lighting", "Sound System", "Covered Gazebo", "Wi-Fi", "Bar Setup", "Lift Access", "Power Backup"],
+      rules: [
+        "Max 25 guests.",
+        "Music volume must be maintained at gentle levels after 10:30 PM.",
+        "No fireworks or glass breakage on rooftop."
+      ],
+      noiseRestriction: "Pleasant ambient music permitted till 11:00 PM.",
+      securityDeposit: 1500,
+      permittedEvents: ["Birthdays", "Farewells", "Anniversaries", "Private Dinners", "Acoustic Evenings"],
+      availableSlots: [
+        "12:00 PM - 4:00 PM",
+        "5:00 PM - 9:00 PM",
+        "6:00 PM - 10:00 PM",
+        "7:00 PM - 11:00 PM"
+      ]
+    },
+    {
+      id: "space-3",
+      name: "Green Farmhouse",
+      tagline: "Serene 1-acre gated estate with pool, orchard lawn and outdoor barbeque",
+      category: "Farmhouse",
+      hostId: "user-host-3",
+      hostName: "Vikram Gill",
+      hostAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: true,
+      city: "Panipat",
+      area: "Samalkha Road",
+      fullAddress: "Farm #14, Samalkha GT Road Greens, Panipat Rural 132101",
+      capacity: 30,
+      price: 8000,
+      durationHours: 6,
+      rating: 4.9,
+      reviewCount: 64,
+      verified: true,
+      isFeatured: true,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1584738766473-61c083514bf4?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "Escape the city into total privacy. An expansive 1-acre private farmhouse with a sparkling blue pool, shaded mango orchard lawn, bonfire pit, and full kitchen facilities for caterers.",
+      amenities: ["Swimming Pool", "Huge Lawn", "BBQ Grill", "Bonfire Pit", "Kitchen", "Ample Parking (15+ cars)", "Caretaker on site", "Wi-Fi"],
+      rules: [
+        "Limit of 30 attendees.",
+        "Care for trees and landscaping.",
+        "Pool usage permitted only with proper swimwear."
+      ],
+      noiseRestriction: "Rural setting allows pleasant music till 11:00 PM.",
+      securityDeposit: 3000,
+      permittedEvents: ["Family Get-togethers", "Milestone Birthdays", "Reunions", "Day Picnics", "Photoshoots"],
+      availableSlots: [
+        "10:00 AM - 4:00 PM",
+        "4:00 PM - 10:00 PM",
+        "Full Day (10:00 AM - 10:00 PM)"
+      ]
+    },
+    {
+      id: "space-4",
+      name: "The Studio Space",
+      tagline: "Chic indoor event lounge with projector, mood lighting and audio console",
+      category: "Studio",
+      hostId: "user-host-4",
+      hostName: "Neha Kapoor",
+      hostAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: false,
+      city: "Panipat",
+      area: "GT Road",
+      fullAddress: "Level 2, Metro Plaza, GT Karnal Road, Panipat 132103",
+      capacity: 20,
+      price: 2500,
+      durationHours: 4,
+      rating: 4.6,
+      reviewCount: 47,
+      verified: true,
+      isFeatured: true,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "Modern, soundproof boutique studio with modular furniture, high-definition laser projector, high-fidelity sound, and customizable LED mood lighting. Perfect for birthday parties, movie/gaming nights, and workshops.",
+      amenities: ["Air Conditioning", "Laser Projector & Screen", "Hi-Fi Sound", "Mood Lights", "Wi-Fi", "Pantry", "Elevator"],
+      rules: [
+        "Max 20 people capacity strictly monitored.",
+        "Indoor venue - no smoking allowed inside.",
+        "Leave electronics in working condition."
+      ],
+      noiseRestriction: "Soundproof facility - standard party music permitted inside anytime.",
+      securityDeposit: 1000,
+      permittedEvents: ["Birthdays", "Farewells", "Watch Parties", "Karaoke Evenings", "Game Nights"],
+      availableSlots: [
+        "11:00 AM - 3:00 PM",
+        "3:30 PM - 7:30 PM",
+        "8:00 PM - 12:00 AM"
+      ]
+    },
+    {
+      id: "space-5",
+      name: "Gulmohar Estate Villa",
+      tagline: "Colonial style heritage bungalow with courtyards and manicured lawn",
+      category: "Villa",
+      hostId: "user-2",
+      hostName: "Rohan Mehta",
+      hostAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: true,
+      city: "Panipat",
+      area: "Sector 12",
+      fullAddress: "Bungalow 7, Gulmohar Enclave, Sector 12, Panipat 132103",
+      capacity: 28,
+      price: 6500,
+      durationHours: 4,
+      rating: 4.9,
+      reviewCount: 92,
+      verified: true,
+      isFeatured: false,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "An elegant colonial villa surrounded by blooming bougainvillea, stone courtyard, and a sprawling manicured front garden. Perfect for family celebrations, milestone birthdays, and engagement dinners.",
+      amenities: ["Manicured Lawn", "Courtyard", "Antique Lounge", "Air Conditioning", "Wi-Fi", "Parking", "Pantry", "Music Setup"],
+      rules: [
+        "Maximum 28 guests.",
+        "Sound level monitored after 10:30 PM.",
+        "Care for antique furnishings."
+      ],
+      noiseRestriction: "Outdoor sound till 10:30 PM.",
+      securityDeposit: 2500,
+      permittedEvents: ["Family Celebrations", "Anniversaries", "Small Engagements", "Private Dinners"],
+      availableSlots: [
+        "12:00 PM - 4:00 PM",
+        "5:00 PM - 9:00 PM",
+        "6:00 PM - 10:00 PM"
+      ]
+    },
+    {
+      id: "space-6",
+      name: "The Glasshouse Terrace",
+      tagline: "Botanical glass pavilion with outdoor wooden deck and sunset views",
+      category: "Terrace",
+      hostId: "user-host-6",
+      hostName: "Priya Sen",
+      hostAvatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: true,
+      city: "Panipat",
+      area: "Ansals Sushant City",
+      fullAddress: "Terrace 301, Tower B, Ansals Sushant City, Panipat 132103",
+      capacity: 25,
+      price: 4200,
+      durationHours: 4,
+      rating: 4.8,
+      reviewCount: 75,
+      verified: true,
+      isFeatured: false,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1533105079780-92b9be482077?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?w=800&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "An architectural marvel featuring an enclosed glass pavilion filled with tropical indoor plants, stepping out onto a wooden deck with panoramic sunset views. Features cocktail tables and acoustic speaker setup.",
+      amenities: ["Glass Enclosure", "Wooden Deck", "Tropical Plants", "Air Conditioning", "Bluetooth Sound", "Lighting", "Wi-Fi"],
+      rules: [
+        "Max 25 guests.",
+        "No footwear inside the glass pavilion.",
+        "Music allowed inside glasshouse till late."
+      ],
+      noiseRestriction: "Outdoor deck music till 10:30 PM; indoor pavilion sound anytime.",
+      securityDeposit: 2000,
+      permittedEvents: ["Birthday Parties", "Sundowners", "Private Dinners", "Farewell Parties"],
+      availableSlots: [
+        "1:00 PM - 5:00 PM",
+        "6:00 PM - 10:00 PM"
+      ]
+    },
+    {
+      id: "space-7",
+      name: "Cedar Wood Private Hall",
+      tagline: "Acoustically treated private celebration hall with plush banquet seating",
+      category: "Private Hall",
+      hostId: "user-host-7",
+      hostName: "Manish Agarwal",
+      hostAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: false,
+      city: "Panipat",
+      area: "Sector 25",
+      fullAddress: "Cedar Complex, Sector 25 Phase 2, Panipat 132103",
+      capacity: 30,
+      price: 4500,
+      durationHours: 4,
+      rating: 4.7,
+      reviewCount: 52,
+      verified: true,
+      isFeatured: false,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1511578314322-379afb476865?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "A private mini-banquet hall tailored specifically for 20-30 people. Equipped with dining tables, buffet counter, sound system, and a small stage for birthday cake cutting.",
+      amenities: ["Air Conditioning", "Buffet Counters", "Dining Furniture", "PA System", "Washrooms", "Ample Parking"],
+      rules: ["Max 30 guests.", "Catering must use designated pantry.", "No open flames inside."],
+      noiseRestriction: "Indoor hall sound permitted till 11:30 PM.",
+      securityDeposit: 1500,
+      permittedEvents: ["Birthdays", "Anniversaries", "Roka Ceremonies", "Family Dinners"],
+      availableSlots: [
+        "11:00 AM - 3:00 PM",
+        "6:00 PM - 10:00 PM"
+      ]
+    },
+    {
+      id: "space-8",
+      name: "Secret Garden Sanctuary",
+      tagline: "Enclosed private lawn with wooden pergola, fountain and string lights",
+      category: "Private Garden",
+      hostId: "user-host-8",
+      hostName: "Kavita Reddy",
+      hostAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      isSuperhost: true,
+      city: "Panipat",
+      area: "Near NFL Colony",
+      fullAddress: "Green Valley Farm Road, Near NFL, Panipat 132103",
+      capacity: 25,
+      price: 3800,
+      durationHours: 4,
+      rating: 4.8,
+      reviewCount: 39,
+      verified: true,
+      isFeatured: false,
+      status: "active",
+      images: [
+        "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop&q=80"
+      ],
+      description: "An intimate walled private garden with a picturesque stone fountain, floral pergola, and seating cushions. Safe and completely secluded for family functions and small celebrations.",
+      amenities: ["Lawn / Garden", "Pergola", "String Lights", "Restrooms", "Dedicated Parking", "Wi-Fi"],
+      rules: ["Max 25 guests.", "Music allowed till 10:00 PM.", "Keep lawns clean."],
+      noiseRestriction: "Music allowed till 10:00 PM.",
+      securityDeposit: 1500,
+      permittedEvents: ["Day Birthdays", "Family Picnics", "Baby Showers", "Photoshoots"],
+      availableSlots: [
+        "10:00 AM - 2:00 PM",
+        "4:00 PM - 8:00 PM"
+      ]
+    }
+  ],
+
+  bookings: [
+    {
+      id: "PP-BK-2026-001",
+      spaceId: "space-1",
+      spaceName: "The Palm Villa",
+      spaceImage: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&auto=format&fit=crop&q=80",
+      category: "Villa",
+      location: "Sector 11, Panipat",
+      userId: "user-1",
+      userName: "Akanksha Verma",
+      userPhone: "+91 98112 34567",
+      hostId: "user-2",
+      hostName: "Rohan Mehta",
+      date: "2026-09-26",
+      formattedDate: "Sat, 26 Sep 2026",
+      slot: "6:00 PM - 10:00 PM (4 hours)",
+      guests: 25,
+      occasion: "25th Birthday Celebration",
+      basePrice: 5000,
+      platformFee: 500,
+      securityDeposit: 2000,
+      totalAmount: 5500,
+      hostEarning: 4500,
+      paymentMethod: "UPI (Google Pay)",
+      paymentStatus: "paid",
+      transactionId: "TXN-9843210948",
+      status: "confirmed",
+      createdAt: "2026-09-18T14:30:00Z"
+    },
+    {
+      id: "PP-BK-2026-002",
+      spaceId: "space-2",
+      spaceName: "Skyline Terrace",
+      spaceImage: "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&auto=format&fit=crop&q=80",
+      category: "Terrace",
+      location: "Model Town, Panipat",
+      userId: "user-1",
+      userName: "Akanksha Verma",
+      userPhone: "+91 98112 34567",
+      hostId: "user-2",
+      hostName: "Rohan Mehta",
+      date: "2026-10-05",
+      formattedDate: "Sun, 05 Oct 2026",
+      slot: "5:00 PM - 9:00 PM (4 hours)",
+      guests: 20,
+      occasion: "College Farewell Party",
+      basePrice: 3500,
+      platformFee: 350,
+      securityDeposit: 1500,
+      totalAmount: 3850,
+      hostEarning: 3150,
+      paymentMethod: "Credit Card (HDFC)",
+      paymentStatus: "paid",
+      transactionId: "TXN-7731298410",
+      status: "confirmed",
+      createdAt: "2026-09-20T10:15:00Z"
+    },
+    {
+      id: "PP-BK-2026-003",
+      spaceId: "space-4",
+      spaceName: "The Studio Space",
+      spaceImage: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&auto=format&fit=crop&q=80",
+      category: "Studio",
+      location: "GT Road, Panipat",
+      userId: "user-guest-9",
+      userName: "Harsh Goel",
+      userPhone: "+91 98761 11223",
+      hostId: "user-2",
+      hostName: "Rohan Mehta",
+      date: "2026-09-30",
+      formattedDate: "Wed, 30 Sep 2026",
+      slot: "5:00 PM - 9:00 PM (4 hours)",
+      guests: 18,
+      occasion: "Game Night & Birthday",
+      basePrice: 2500,
+      platformFee: 250,
+      securityDeposit: 1000,
+      totalAmount: 2750,
+      hostEarning: 2250,
+      paymentMethod: "UPI (PhonePe)",
+      paymentStatus: "paid",
+      transactionId: "TXN-5521990423",
+      status: "pending",
+      createdAt: "2026-09-24T18:40:00Z"
+    },
+    {
+      id: "PP-BK-2026-004",
+      spaceId: "space-3",
+      spaceName: "Green Farmhouse",
+      spaceImage: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&auto=format&fit=crop&q=80",
+      category: "Farmhouse",
+      location: "Samalkha Road, Panipat",
+      userId: "user-1",
+      userName: "Akanksha Verma",
+      userPhone: "+91 98112 34567",
+      hostId: "user-host-3",
+      hostName: "Vikram Gill",
+      date: "2026-08-20",
+      formattedDate: "Thu, 20 Aug 2026",
+      slot: "10:00 AM - 4:00 PM (6 hours)",
+      guests: 28,
+      occasion: "Family Anniversary Lunch",
+      basePrice: 8000,
+      platformFee: 800,
+      securityDeposit: 3000,
+      totalAmount: 8800,
+      hostEarning: 7200,
+      paymentMethod: "Net Banking (SBI)",
+      paymentStatus: "paid",
+      transactionId: "TXN-2210948571",
+      status: "completed",
+      createdAt: "2026-08-10T11:20:00Z"
+    }
+  ],
+
+  reviews: [
+    {
+      id: "rev-1",
+      spaceId: "space-1",
+      userId: "user-1",
+      userName: "Akanksha Verma",
+      userAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&auto=format&fit=crop&q=80",
+      rating: 5,
+      date: "Sep 2026",
+      comment: "Hosted my sister's 25th birthday here. The pool was pristine, the garden was beautifully maintained, and Rohan was an exceptional host. The private, peaceful atmosphere made it unforgettable!",
+      scores: { cleanliness: 5, accuracy: 5, communication: 5, value: 4.8 }
+    },
+    {
+      id: "rev-2",
+      spaceId: "space-1",
+      userId: "user-rev-2",
+      userName: "Kabir Sachdeva",
+      userAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80",
+      rating: 5,
+      date: "Aug 2026",
+      comment: "Best private venue in Panipat hands down. No noise from neighbors, complete privacy, sound system was top notch. 10/10 recommend for small celebrations.",
+      scores: { cleanliness: 5, accuracy: 5, communication: 4.9, value: 5 }
+    },
+    {
+      id: "rev-3",
+      spaceId: "space-2",
+      userId: "user-rev-3",
+      userName: "Simran Batra",
+      userAvatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80",
+      rating: 4.8,
+      date: "Sep 2026",
+      comment: "The rooftop views in the evening are magical with all the fairy lights. Great layout for cocktail dinners and music. Seamless booking experience.",
+      scores: { cleanliness: 4.8, accuracy: 4.9, communication: 5, value: 4.7 }
+    }
+  ],
+
+  notifications: [
+    {
+      id: "notif-1",
+      userId: "user-1",
+      title: "Booking Confirmed! 🎉",
+      message: "Your booking for The Palm Villa on Sat, 26 Sep 2026 is confirmed.",
+      timestamp: "10 mins ago",
+      read: false,
+      type: "booking_confirmed"
+    },
+    {
+      id: "notif-2",
+      userId: "user-2",
+      title: "New Booking Request",
+      message: "Harsh Goel requested The Studio Space for 30 Sep 2026.",
+      timestamp: "1 hour ago",
+      read: false,
+      type: "booking_request"
+    },
+    {
+      id: "notif-3",
+      userId: "user-3",
+      title: "New Space Submitted for Review",
+      message: "The Glasshouse Terrace submitted by Priya Sen awaits admin approval.",
+      timestamp: "3 hours ago",
+      read: true,
+      type: "admin_alert"
+    }
+  ]
+};
