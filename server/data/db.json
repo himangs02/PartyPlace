@@ -545,7 +545,7 @@
       "paymentMethod": "Credit Card (HDFC)",
       "paymentStatus": "paid",
       "transactionId": "TXN-7731298410",
-      "status": "confirmed",
+      "status": "cancelled",
       "createdAt": "2026-09-20T10:15:00Z"
     },
     {
@@ -656,6 +656,15 @@
     }
   ],
   "notifications": [
+    {
+      "id": "notif-1793629063865",
+      "userId": "user-1",
+      "title": "Booking Update: CANCELLED",
+      "message": "Your booking for Skyline Terrace has been marked as cancelled.",
+      "timestamp": "Just now",
+      "read": false,
+      "type": "booking_update"
+    },
     {
       "id": "notif-1",
       "userId": "user-1",
