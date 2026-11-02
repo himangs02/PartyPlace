@@ -107,106 +107,118 @@ export default function LandingView({
 
   return (
     <div className="landing-page-root">
-      {/* HERO SECTION */}
+      {/* LUXURY HERO BANNER SECTION */}
       <section className="hero-section">
-        <div className="hero-background-overlay" />
         <div className="container hero-container">
-          <div className="hero-content">
-            <div className="hero-pill-badge">
-              <PartyPopper size={14} /> Private Event Spaces for 15–30 Guests
+          <div className="hero-banner-card">
+            <div className="hero-banner-media">
+              <img 
+                src="/hero-bg.jpg" 
+                alt="PartyPlace luxury private celebration venue" 
+                className="hero-banner-img" 
+              />
+              <div className="hero-banner-overlay" />
             </div>
-            <h1 className="hero-title">
-              Your Party. <br />
-              <span className="hero-highlight">Your Place. Your Choice.</span>
-            </h1>
-            <p className="hero-subtitle">
-              Discover and book verified private spaces for birthdays, get-togethers, farewells, family functions, and intimate celebrations.
-            </p>
-          </div>
 
-          {/* Functional Search Component */}
-          <div className="hero-search-card card">
-            <form onSubmit={handleSearchSubmit} className="search-form-grid">
-              {/* Location */}
-              <div className="search-field">
-                <label className="search-label">
-                  <MapPin size={15} color="#70152F" /> Location
-                </label>
-                <input 
-                  type="text" 
-                  value={searchLocation} 
-                  onChange={(e) => setSearchLocation(e.target.value)}
-                  placeholder="Enter city or area"
-                  className="search-input"
-                />
+            <div className="hero-banner-content">
+              <div className="hero-pill-badge">
+                <PartyPopper size={14} className="hero-badge-icon" />
+                <span>Private Event Spaces for 15–30 Guests</span>
               </div>
+              <h1 className="hero-title">
+                Your Party. <br />
+                Your Place. <br />
+                <span className="hero-highlight">Your Choice.</span>
+              </h1>
+              <p className="hero-subtitle">
+                Discover and book verified private spaces for birthdays, get-togethers, farewells, family functions, and intimate celebrations.
+              </p>
 
-              <div className="search-divider" />
+              {/* Functional Search Component */}
+              <div className="hero-search-card">
+                <form onSubmit={handleSearchSubmit} className="search-form-grid">
+                  {/* Location */}
+                  <div className="search-field">
+                    <label className="search-label">
+                      <MapPin size={15} color="#70152F" /> Location
+                    </label>
+                    <input 
+                      type="text" 
+                      value={searchLocation} 
+                      onChange={(e) => setSearchLocation(e.target.value)}
+                      placeholder="Enter city or area"
+                      className="search-input"
+                    />
+                  </div>
 
-              {/* Date */}
-              <div className="search-field">
-                <label className="search-label">
-                  <Calendar size={15} color="#70152F" /> Date
-                </label>
-                <input 
-                  type="date" 
-                  value={searchDate} 
-                  onChange={(e) => setSearchDate(e.target.value)}
-                  className="search-input"
-                />
+                  <div className="search-divider" />
+
+                  {/* Date */}
+                  <div className="search-field">
+                    <label className="search-label">
+                      <Calendar size={15} color="#70152F" /> Date
+                    </label>
+                    <input 
+                      type="date" 
+                      value={searchDate} 
+                      onChange={(e) => setSearchDate(e.target.value)}
+                      className="search-input"
+                    />
+                  </div>
+
+                  <div className="search-divider" />
+
+                  {/* Guests */}
+                  <div className="search-field">
+                    <label className="search-label">
+                      <Users size={15} color="#70152F" /> Guests
+                    </label>
+                    <select 
+                      value={searchGuests} 
+                      onChange={(e) => setSearchGuests(e.target.value)}
+                      className="search-input"
+                    >
+                      <option value="15">15 Guests</option>
+                      <option value="20">20 Guests</option>
+                      <option value="25">25 Guests</option>
+                      <option value="30">30 Guests (Max)</option>
+                    </select>
+                  </div>
+
+                  <div className="search-divider" />
+
+                  {/* Budget */}
+                  <div className="search-field">
+                    <label className="search-label">
+                      <IndianRupee size={15} color="#70152F" /> Budget
+                    </label>
+                    <select 
+                      value={searchBudget} 
+                      onChange={(e) => setSearchBudget(e.target.value)}
+                      className="search-input"
+                    >
+                      <option value="5000">Up to ₹5,000</option>
+                      <option value="10000">Up to ₹10,000</option>
+                      <option value="20000">Up to ₹20,000</option>
+                      <option value="50000">Any Budget</option>
+                    </select>
+                  </div>
+
+                  {/* Search Button */}
+                  <button type="submit" className="btn btn-primary search-submit-btn">
+                    <Search size={18} />
+                    <span>Search Spaces</span>
+                  </button>
+                </form>
               </div>
-
-              <div className="search-divider" />
-
-              {/* Guests */}
-              <div className="search-field">
-                <label className="search-label">
-                  <Users size={15} color="#70152F" /> Guests
-                </label>
-                <select 
-                  value={searchGuests} 
-                  onChange={(e) => setSearchGuests(e.target.value)}
-                  className="search-input"
-                >
-                  <option value="15">15 Guests</option>
-                  <option value="20">20 Guests</option>
-                  <option value="25">25 Guests</option>
-                  <option value="30">30 Guests (Max)</option>
-                </select>
-              </div>
-
-              <div className="search-divider" />
-
-              {/* Budget */}
-              <div className="search-field">
-                <label className="search-label">
-                  <IndianRupee size={15} color="#70152F" /> Budget
-                </label>
-                <select 
-                  value={searchBudget} 
-                  onChange={(e) => setSearchBudget(e.target.value)}
-                  className="search-input"
-                >
-                  <option value="5000">Up to ₹5,000</option>
-                  <option value="10000">Up to ₹10,000</option>
-                  <option value="20000">Up to ₹20,000</option>
-                  <option value="50000">Any Budget</option>
-                </select>
-              </div>
-
-              {/* Search Button */}
-              <button type="submit" className="btn btn-primary search-submit-btn">
-                <Search size={18} />
-                <span>Search Spaces</span>
-              </button>
-            </form>
+            </div>
           </div>
 
           {/* 4 Trust Highlights Bar */}
           <div className="hero-trust-bar">
             <div className="trust-item">
               <div className="trust-icon-wrap">
-                <ShieldCheck size={20} color="#70152F" />
+                <ShieldCheck size={22} color="#70152F" />
               </div>
               <div className="trust-text">
                 <strong>Verified Spaces</strong>
@@ -216,7 +228,7 @@ export default function LandingView({
 
             <div className="trust-item">
               <div className="trust-icon-wrap">
-                <CheckCircle2 size={20} color="#70152F" />
+                <CheckCircle2 size={22} color="#70152F" />
               </div>
               <div className="trust-text">
                 <strong>Safe & Compliant</strong>
@@ -226,7 +238,7 @@ export default function LandingView({
 
             <div className="trust-item">
               <div className="trust-icon-wrap">
-                <Clock size={20} color="#70152F" />
+                <Clock size={22} color="#70152F" />
               </div>
               <div className="trust-text">
                 <strong>Flexible & Affordable</strong>
@@ -236,7 +248,7 @@ export default function LandingView({
 
             <div className="trust-item">
               <div className="trust-icon-wrap">
-                <Home size={20} color="#70152F" />
+                <Home size={22} color="#70152F" />
               </div>
               <div className="trust-text">
                 <strong>Wide Variety</strong>

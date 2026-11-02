@@ -662,7 +662,7 @@
       "title": "Booking Update: CANCELLED",
       "message": "Your booking for Skyline Terrace has been marked as cancelled.",
       "timestamp": "Just now",
-      "read": false,
+      "read": true,
       "type": "booking_update"
     },
     {
@@ -671,7 +671,7 @@
       "title": "Booking Confirmed! 🎉",
       "message": "Your booking for The Palm Villa on Sat, 26 Sep 2026 is confirmed.",
       "timestamp": "10 mins ago",
-      "read": false,
+      "read": true,
       "type": "booking_confirmed"
     },
     {
